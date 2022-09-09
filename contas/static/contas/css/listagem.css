@@ -1,0 +1,36 @@
+body {
+    font-family: Helvetica;
+    text-align: center;
+    color: #fff;
+    background-color: #333;
+    margin: 0;
+}
+
+nav h1 {
+    background-color: black;
+    color: red;
+}
+
+nav {
+    border-bottom: 1px solid #666;
+}
+
+
+.list-description {
+    font-size: 30px;
+    text-align: center;
+    background-color: #333;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.new {
+    background-color: #1fc724;
+    color: #333;
+    text-decoration: none;
+    font-size: 30px;
+    border: 3px solid #fff;
+    transition: 1s;
+}
