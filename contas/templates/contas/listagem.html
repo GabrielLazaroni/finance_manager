@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,27 +9,27 @@
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'contas/css/listagem.css' %}">
 </head>
+
 <body>
-    <nav>
-        <h1>Controle Gastos</h1>
-    </nav>
-    <ul>        
-    {% for i in transacoes %}
-        <li>
-        <a class="list-description" href="{% url 'url_update' i.id %}">
-            {{ i.descricao }} - {{ i.data }} - 
-            {{ i.valor }} - {{ i.categoria }}
-        </a>
-        </li>
-    {% endfor %}
-    <a class="new" href="{% url 'url_nova' %}">Nova transação</a>
-    </ul>
+    <h1>Controle de <br> Gastos</h1>
+
+    <div>
+        <div class="form">
+            <a class="new" href="{% url 'url_nova' %}">
+                <p><button>Nova transação</button>
+            </a></p>
+            {% for i in transacoes %}
+            <ul>
+                <a class="list-description" href="{% url 'url_update' i.id %}">
+                    <button>
+                        {{ i.descricao }} - {{ i.data }} -
+                        {{ i.valor }} - {{ i.categoria }}
+                    </button>
+                </a>
+            </ul>
+            {% endfor %}
+        </div>
+    </div>
 </body>
+
 </html>
-
-        
-    
-    
-    
-    
-
