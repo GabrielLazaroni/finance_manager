@@ -35,13 +35,6 @@ div::-webkit-scrollbar-thumb {
   background: #000;
 }
 
-h1 {
-  font-family: "Poppins", sans-serif;
-  color: #4717f6;
-  display: block;
-  padding: 70px;
-}
-
 a button {
   width: 150px;
   height: 54px;

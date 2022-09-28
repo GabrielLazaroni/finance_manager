@@ -11,7 +11,7 @@ def home(request):
 
 def listagem(request):
     data = {}
-    data['transacoes'] = Transacao.objects.all()
+    data['transacoes'] = reversed(Transacao.objects.all())
     return render(request, 'contas/listagem.html', data)
 
 
