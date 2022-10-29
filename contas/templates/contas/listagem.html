@@ -12,22 +12,34 @@
 
 <body>
 
-    <div>
-        <div class="form">
-            <a class="new" href="{% url 'url_nova' %}">
-                <p><button>Nova transação</button>
-            </a></p>
-            {% for i in transacoes %}
-            <ul>
-                <a class="list-description" href="{% url 'url_update' i.id %}">
-                    <button>
-                        {{ i.descricao }} - {{ i.data }} -
-                        {{ i.valor }} - {{ i.categoria }}
-                    </button>
-                </a>
+    <header class="header">
+        <a class="title" href="">YourMoney</a>
+        <nav>
+            <ul class="menu">
+                <li><a href="">Sobre</a></li>
+                <li><a href="">contato</a></li>
+                <li><a href="">sign-in</a></li>
             </ul>
-            {% endfor %}
-        </div>
+        </nav>
+    </header>
+
+    <div class="new-trans-btn">
+        <a class="new" href="{% url 'url_nova' %}">
+            <button class="btn">Nova transação</button>
+        </a>
+    </div>
+
+    <div class="form">
+        {% for i in transacoes %}
+        <ul>
+            <a class="list-description" href="{% url 'url_update' i.id %}">
+                <button>
+                    {{ i.descricao }} - {{ i.data }} -
+                    {{ i.valor }} - {{ i.categoria }}
+                </button>
+            </a>
+        </ul>
+        {% endfor %}
     </div>
 </body>
 

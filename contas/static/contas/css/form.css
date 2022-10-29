@@ -15,7 +15,6 @@ ul {
 
 a {
   text-decoration: none;
-  color: #fff;
   text-transform: uppercase;
 }
 
@@ -44,16 +43,19 @@ a {
 }
 
 .menu li a {
-  display: block;
   padding: 10px;
   color: #a239ca;
 }
 
-button {
+.btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn {
   width: 200px;
   height: 64px;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
   border: none;
   border-radius: 0.3rem;
   font-family: "Poppins", sans-serif;
@@ -62,6 +64,8 @@ button {
   color: #ffff;
   text-decoration: none;
   background-color: #100d1a;
+  cursor: pointer;
+  text-transform: capitalize;
 }
 
 button:hover {
